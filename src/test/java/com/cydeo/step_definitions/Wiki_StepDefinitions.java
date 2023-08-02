@@ -32,4 +32,17 @@ public class Wiki_StepDefinitions {
         Assert.assertTrue(actualTitle.contains(string));
     }
 
+    @Then("User should see {string} in the main header")
+    public void userShouldSeeSteveJobsInTheMainHeader(String string) {
+        Assert.assertTrue(wikiSearchPage.mainHeader.isDisplayed());
+
+        Assert.assertEquals(string, wikiSearchPage.mainHeader.getText());
+    }
+
+    @Then("User should see {string} in the image header")
+    public void userShouldSeeInTheImageHeader(String string) {
+        Assert.assertTrue(wikiSearchPage.imageHeader.isDisplayed());
+
+        Assert.assertEquals(string, wikiSearchPage.imageHeader.getText());
+    }
 }
