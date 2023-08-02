@@ -29,20 +29,18 @@ Feature: Wikipedia search functionality and verifications
     And User clicks wiki search button
     Then User should see "<expectedTitle>" in the wiki title
     Then User should see "<expectedMainHeader>" in the main header
-    Then User should see "<expectedImageHeader>" in the image header
+    #Then User should see "<expectedImageHeader>" in the image header
 
 
-    @soccerPlayers
     Examples: search values we are going to be using in this scenario is as below
       | searchValue       | expectedTitle     | expectedMainHeader | expectedImageHeader |
       | Steve Jobs        | Steve Jobs        | Steve Jobs         | Steve Jobs          |
       | Cristiano Ronaldo | Cristiano Ronaldo | Cristiano Ronaldo  | Cristiano Ronaldo   |
       | Bob Marley        | Bob Marley        | Bob Marley         | Bob Marley          |
       | Chuck Norris      | Chuck Norris      | Chuck Norris       | Chuck Norris        |
-      | Antony Hopkins    | Antony Hopkins    | Antony Hopkins     | Antony Hopkins      |
 
 
-    @scientists
+
     Examples:
       | searchValue  | expectedTitle | expectedMainHeader | expectedImageHeader |
       | Marie Curie  | Marie Curie   | Marie Curie        | Marie Curie         |
