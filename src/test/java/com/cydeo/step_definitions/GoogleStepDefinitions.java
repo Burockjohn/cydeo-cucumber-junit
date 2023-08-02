@@ -7,7 +7,7 @@ import org.junit.Assert;
 
 public class GoogleStepDefinitions {
 
-    @When("user is Google search page")
+    @When("user is on Google search page")
     public void user_is_google_search_page() {
 
         Driver.getDriver().get("https://www.google.com");
