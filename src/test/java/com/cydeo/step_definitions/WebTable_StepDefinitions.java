@@ -39,4 +39,8 @@ public class WebTable_StepDefinitions {
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("orders"));
     }
 
+    @When("user enters username {string} password {string} and logins")
+    public void userEntersUsernamePasswordAndLogins(String username, String password) {
+        webTableLoginPage.login();
+    }
 }
