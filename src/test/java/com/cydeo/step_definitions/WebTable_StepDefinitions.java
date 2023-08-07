@@ -9,6 +9,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 import javax.swing.*;
+import java.util.Map;
 
 public class WebTable_StepDefinitions {
 
@@ -41,6 +42,13 @@ public class WebTable_StepDefinitions {
 
     @When("user enters username {string} password {string} and logins")
     public void userEntersUsernamePasswordAndLogins(String username, String password) {
-        webTableLoginPage.login(username,password);
+        webTableLoginPage.login(username, password);
+    }
+
+    @When("User enters below credentials")
+    public void user_enters_below_credentials(Map<String, String> credentials) {
+        webTableLoginPage.inputUsername.sendKeys(credentials.get("username"));
+        webTableLoginPage.inputPassword.sendKeys(credentials.get("password"));
+        webTableLoginPage.inputLoginButton.click();
     }
 }
