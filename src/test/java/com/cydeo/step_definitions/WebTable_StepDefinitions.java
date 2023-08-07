@@ -41,6 +41,6 @@ public class WebTable_StepDefinitions {
 
     @When("user enters username {string} password {string} and logins")
     public void userEntersUsernamePasswordAndLogins(String username, String password) {
-        webTableLoginPage.login(username, password);
+        webTableLoginPage.login(username,password);
     }
 }
