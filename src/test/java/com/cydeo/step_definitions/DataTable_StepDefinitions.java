@@ -11,6 +11,8 @@ import java.util.List;
 
 public class DataTable_StepDefinitions {
 
+    DropdownsPage dropdownsPage = new DropdownsPage();
+
     @Then("user should see fruits I like")
     public void user_should_see_fruits_i_like(List<String> fruits) {
 
@@ -25,8 +27,6 @@ public class DataTable_StepDefinitions {
         Driver.getDriver().get("https://practice.cydeo.com/dropdown");
 
     }
-
-    DropdownsPage dropdownsPage = new DropdownsPage();
 
     @Then("User should see below info in month dropdown")
     public void user_should_see_below_info_in_month_dropdown(List<String> expectedMonths) {
