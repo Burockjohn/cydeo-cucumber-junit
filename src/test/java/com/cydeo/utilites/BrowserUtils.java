@@ -138,7 +138,7 @@ public class BrowserUtils {
         for (String handle : Driver.getDriver().getWindowHandles()) {
             Driver.getDriver().switchTo().window(handle);
             if (Driver.getDriver().getTitle().equals(targetTitle)) {
-                return;
+                break;
             }
         }
         Driver.getDriver().switchTo().window(origin);
